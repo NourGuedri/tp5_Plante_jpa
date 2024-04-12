@@ -3,6 +3,8 @@ import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
@@ -12,6 +14,7 @@ import javax.persistence.Table;
 public class Plante implements Serializable{
 @Id
 @Column (name="ID_Plante")
+@GeneratedValue (strategy=GenerationType.IDENTITY)
 private Long idPlante;
 @Column (name="NOM_Plante")
 private String nomPlante;
